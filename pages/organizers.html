@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+    /*Google Logo Boxes*/
+    .logo-card {
+      background: white;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      padding: 1em;
+      border-radius: 2px;
+      background-size: 180px 180px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .card-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+    .logo-box {
+      width: 100%;
+      display: inline-flex;
+      /*margin-bottom: 2em;*/
+    }
+
+    #card-top {
+      display: block;
+      margin: 0 0 2em 0;
+      /*margin: 64px 120px 60px 5px;*/
+      background-color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      border-radius: 0 0 2px 2px;
+      overflow: hidden;
+    }
+    #card {
+      display: block;
+      margin: 0 0 2em 0;
+      /*margin: 64px 120px 60px 5px;*/
+      background-color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="card-top">
+    <section class="logo-box">
+        <div class="logo-card" z="2" style="background-image: url('pages/images/antonio.jpg');">
+          <paper-shadow></paper-shadow>
+        </div>
+        <div class="logo-card" z="2" style="background-image: url('pages/images/chida.jpg');">
+          <paper-shadow></paper-shadow>
+        </div>
+        <div class="logo-card" z="2" style="background-image: url('pages/images/tyson.jpg');">
+          <paper-shadow></paper-shadow>
+        </div>
+        <div class="logo-card" z="2" style="background-image: url('pages/images/babs.jpg');">
+          <paper-shadow></paper-shadow>
+        </div>
+    </section>
+  </div>
+
+</body>
+</html>
