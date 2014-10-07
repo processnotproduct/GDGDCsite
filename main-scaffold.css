@@ -165,13 +165,14 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   bottom: 0;
   left: 0;
   overflow: auto;
+  margin: 1em;
 }
 
 /*CUSTOM STYLES*/
 #paper_fab {
-  top: 7.2em;
+  top: 5.8em;
   position: absolute;
-  right: .7em;
+  right: -1.8em;
   z-index: 1;
 }
 
@@ -188,4 +189,3 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   display: inline-block;
   padding-bottom: 3px;
 }
-

@@ -1,6 +1,10 @@
 <!doctype html>
 <html>
 <head>
+
+  <!--CORE-->
+  <!--<link rel="import" href="../bower_components/core-card/core-card.html">-->
+
   <!--FONTS-->
   <link rel="import" href="font-roboto/roboto.html">
 
@@ -13,105 +17,166 @@
     /*Google Logo Boxes*/
     .logo-card {
       background: white;
-      width: 200px;
-      height: 200px;
-      position: relative;
-      margin: 0 auto;
-      padding: 1em;
+      /*width: 200px;*/
+      /*height: 200px;*/
+      /*position: relative;*/
+      margin: 1em;
+      padding: .5em;
       border-radius: 2px;
-      background-size: 180px 180px;
-      background-repeat: no-repeat;
-      background-position: center;
+      /*background-size: 180px 180px;*/
+      /*background-repeat: no-repeat;*/
+      /*background-position: center;*/
+      box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+      align-self: flex-start;
     }
-    .card-inner {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 2px;
-    }
+    /*.card-inner {*/
+    /*  position: absolute;*/
+    /*  left: 0;*/
+    /*  top: 0;*/
+    /*  right: 0;*/
+    /*  bottom: 0;*/
+    /*  border-radius: 2px;*/
+    /*}*/
     .logo-box {
       width: 100%;
-      display: inline-flex;
+      display: flex;
       /*margin-bottom: 2em;*/
     }
 
     /*Header Boxes*/
-    .header-card {
-      position: relative;
+    /*.header-card {*/
+      /*position: relative;*/
       /*border-radius: 2px;*/
       /*margin: 2em;*/
-      padding: 1em;
+      /*padding: 1em;*/
       /*background-image: url(images/clouds.png);*/
-      background-size: cover;
-      background-position: center;
-      /*width: 100%;*/
-      text-align: center;
-    }
-    .card-inner {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      text-align: center;
-      border-radius: 2px;
-    }
+      /*background-size: cover;*/
+      /*background-position: center bottom;*/
+    /*  width: 100%;*/
+    /*  text-align: center;*/
+    /*}*/
+    /*.card-inner {*/
+    /*  position: absolute;*/
+    /*  left: 0;*/
+    /*  top: 0;*/
+    /*  right: 0;*/
+    /*  bottom: 0;*/
+    /*  text-align: center;*/
+    /*  border-radius: 2px;*/
+    /*}*/
     .header-box {
       width: 100%;
       text-align: center;
+      display: flex-wrap;
     }
 
-    #card-top {
-      display: block;
-      margin: 0 0 2em 0;
+    /*#card-top {*/
+    /*  display: block;*/
+    /*  margin: 0 0 2em 0;*/
+    /*  margin: 64px 120px 60px 5px;*/
+    /*  background-color: #fff;*/
+    /*  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+    /*  border-radius: 0 0 2px 2px;*/
+    /*  overflow: hidden;*/
+    /*}*/
+    /*#card {*/
+    /*  display: block;*/
+    /*  margin: 0 0 2em 0;*/
       /*margin: 64px 120px 60px 5px;*/
-      background-color: #fff;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    /*  background-color: #fff;*/
+    /*  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+    /*  border-radius: 2px;*/
+    /*  overflow: hidden;*/
+    /*}*/
+
+    #core_card {
+      background-image: url('images/clouds.png');
+      display: flex-wrap;
+      /*height: 300px;*/
       border-radius: 0 0 2px 2px;
-      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+      left: 0px;
+      top: 0px;
+      background-color: white;
+      margin: 0;
+      padding: 1em;
+      background-size: cover;
+      background-position: center bottom;
+      text-align: center;
     }
-    #card {
-      display: block;
+
+    #core_card[narrow] {
+      background-image: url('images/clouds.png');
+      display: flex;
+      /*height: 300px;*/
+      border-radius: 0 0 2px 2px;
+      box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+      left: 0px;
+      top: 0px;
+      background-color: white;
+      margin: 1em;
+      padding: 1em;
+      background-size: cover;
+      background-position: center bottom;
+      text-align: center;
+    }
+    #core_card1 {
+      /*background-image: url('images/clouds.png');*/
+      display: flex;
+      /*height: 300px;*/
+      /*border-radius: 0 0 2px 2px;*/
+      /*box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;*/
+      left: 0px;
+      top: 0px;
+      /*background-color: white;*/
       margin: 0 0 2em 0;
-      /*margin: 64px 120px 60px 5px;*/
-      background-color: #fff;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      border-radius: 2px;
-      overflow: hidden;
+      padding: 1em;
+      background-size: cover;
+      background-position: center bottom;
+      text-align: center;
+    }
+
+    #core_card1[narrow] {
+      /*background-image: url('images/clouds.png');*/
+      display: flex;
+      /*height: 300px;*/
+      /*border-radius: 0 0 2px 2px;*/
+      /*box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;*/
+      left: 0px;
+      top: 0px;
+      /*background-color: white;*/
+      margin: 0 0 2em 0;
+      padding: 1em;
+      background-size: cover;
+      background-position: center bottom;
+      text-align: center;
+    }
+
+    .img {
+      width: 90%;
     }
   </style>
 </head>
 
 <body>
 
-  <div id="card-top" style="background-image: url('images/clouds.png');">
-    <div class="header-card" z="2">
-      <paper-shadow>
-        <h1 style="font-weight: 300;">GDG D.C. is proud to annouce:</h1>
-        <h1 style="font-weight: 400;">DevFest D.C. 2014</h1>
-        <h2 style="font-weight: 400;">Nov 7th 9:00 AM<br>@AOL - Dulles, VA</h2>
-        <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
-      </paper-shadow>
+  <div id="core_card" narrow?="{{narrow}}" layout vertical>
+    <div class="header-box">
+      <h1 style="font-weight: 300;">GDG D.C. is proud to annouce:</h1>
+      <h1 style="font-weight: 400;">DevFest D.C. 2014</h1>
+      <h2 style="font-weight: 400;">Nov 7th 9:00 AM<br>@AOL - Dulles, VA</h2>
+      <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
     </div>
   </div>
 
-  <div id="card">
-    <section class="logo-box">
-      <div class="logo-card" z="2" style="background-image: url('images/Android-logo.png');">
-        <paper-shadow></paper-shadow>
-      </div>
-      <div class="logo-card" z="2" style="background-image: url('images/gcp-live-logo.png');">
-        <paper-shadow></paper-shadow>
-      </div>
-      <div class="logo-card" z="2" style="background-image: url('images/products-googleglass.png');">
-        <paper-shadow></paper-shadow>
-      </div>
-      <div class="logo-card" z="2" style="background-image: url('images/Chrome-logo.png');">
-        <paper-shadow></paper-shadow>
-      </div>
-    </section>
+  <div id="core_card1" narrow?="{{narrow}}" layout horizontal wrap>
+    <!--<div class="logo-box">-->
+      <div class="logo-card"><img class="img" src="images/Android-logo.png" alt="Andy"></div>
+      <div class="logo-card"><img class="img" src="images/gcp-live-logo.png" alt="Cloudy"></div>
+      <div class="logo-card"><img class="img" src="images/products-googleglass.png" alt="Glassy"></div>
+      <div class="logo-card"><img class="img" src="images/Chrome-logo.png" alt="Chromey"></div>
+    <!--</div>-->
   </div>
+
 </body>
 </html>
