@@ -1,6 +1,6 @@
-#drawerPanel, [drawer] {
+/*#drawerPanel, [drawer] {*/
   /*background-color: #eee;*/
-}
+/*}*/
 
 [drawer] {
   -webkit-transform: translateZ(0);
@@ -59,6 +59,7 @@ core-submenu > paper-item.core-selected {
   background-color: cornflowerblue;
   color: white;
   margin: 5px;
+  border-radius: 2px;
 }
 
 polyfill-next-selector { content: 'core-submenu > #submenu > paper-item'; }
@@ -166,6 +167,7 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   overflow: auto;
 }
 
+/*CUSTOM STYLES*/
 #paper_fab {
   top: 7.2em;
   position: absolute;
