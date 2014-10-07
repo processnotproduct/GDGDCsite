@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>GDG D.C.</title>
+
+  <!--SCRIPT FOR BACKGROUND-->
+  <script type="text/javascript">
+    function changeImg(imgNumber)   {
+      var myImages = ["images/bg-01.jpg", "images/bg-02.jpg", "images/bg-03.jpg", "images/bg-04.jpg", "images/bg-05.png", "images/bg-06.jpg", "images/bg-07.png", "images/bg-08.png", "images/bg-09.jpg", "images/bg-10.jpg", "images/bg-11.jpg",];
+      var imgShown = document.body.style.backgroundImage;
+      var newImgNumber = Math.floor(Math.random()*myImages.length);
+      document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+      }
+    window.onload=changeImg;
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="../platform/platform.js"></script>
+
+  <link rel="import" href="../core-icons/core-icons.html">
+  <link rel="import" href="../core-icons/device-icons.html">
+  <link rel="import" href="../core-item/core-item.html">
+
+  <!--FONTS-->
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+
+  <link rel="import" href="main-scaffold.html">
+
+  <style>
+    body {
+      font-family: RobotoDraft, sans-serif;
+      margin: 0;
+    }
+
+    section {
+      padding: 40px;
+      min-height: 300px;
+    }
+
+    .bg {
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>
+
+</head>
+
+<body unresolved class="bg">
+
+  <main-scaffold></main-scaffold>
+
+</body>
+</html>

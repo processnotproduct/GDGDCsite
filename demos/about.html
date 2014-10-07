@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <!--FONTS-->
+  <link rel="import" href="./font-roboto/roboto.html">
+
+  <style>
+    body {
+      font-family: RobotoDraft, sans-serif;
+      margin: 0;
+      /*height: 100%;*/
+    }
+    /*Google Logo Boxes*/
+    .logo-card {
+      background: white;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      padding: 1em;
+      border-radius: 2px;
+      background-size: 180px 180px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .card-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+    .logo-box {
+      width: 100%;
+      display: inline-flex;
+      /*margin-bottom: 2em;*/
+    }
+
+    /*Header Boxes*/
+    .header-card {
+      position: relative;
+      /*border-radius: 2px;*/
+      /*margin: 2em;*/
+      padding: 1em;
+      /*background-image: url(images/clouds.png);*/
+      background-size: cover;
+      background-position: center;
+      /*width: 100%;*/
+      text-align: center;
+    }
+    .card-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      border-radius: 2px;
+    }
+    .header-box {
+      width: 100%;
+      text-align: center;
+    }
+
+    #card-top {
+      display: block;
+      margin: 0 0 2em 0;
+      /*margin: 64px 120px 60px 5px;*/
+      background-color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      border-radius: 0 0 2px 2px;
+      overflow: hidden;
+    }
+    #card {
+      display: block;
+      margin: 0 0 2em 0;
+      /*margin: 64px 120px 60px 5px;*/
+      background-color: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="card-top" style="background-image: url('images/clouds.png');">
+    <div class="header-card" z="2">
+      <paper-shadow>
+        <h1 style="font-weight: 300;">GDG D.C. is proud to annouce:</h1>
+        <h1 style="font-weight: 400;">DevFest D.C. 2014</h1>
+        <h2 style="font-weight: 400;">Nov 7th 9:00 AM<br>@AOL - Dulles, VA</h2>
+        <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
+      </paper-shadow>
+    </div>
+  </div>
+
+  <div id="card">
+    <section class="logo-box">
+      <div class="logo-card" z="2" style="background-image: url('images/Android-logo.png');">
+        <paper-shadow></paper-shadow>
+      </div>
+      <div class="logo-card" z="2" style="background-image: url('images/gcp-live-logo.png');">
+        <paper-shadow></paper-shadow>
+      </div>
+      <div class="logo-card" z="2" style="background-image: url('images/products-googleglass.png');">
+        <paper-shadow></paper-shadow>
+      </div>
+      <div class="logo-card" z="2" style="background-image: url('images/Chrome-logo.png');">
+        <paper-shadow></paper-shadow>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
