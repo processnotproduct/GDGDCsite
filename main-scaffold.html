@@ -24,7 +24,7 @@
         <content select=".menuButton" on-tap="{{togglePanel}}">
           <core-icon-button class="menuButton fallback" icon="menu"></core-icon-button>
         </content>
-        <div hidden?="{{!narrow}}"><img src="images/GDGredblue.png" class="gdglogo"> GDG D.C. <img src="images/GDGgreenyellow.png" class="gdglogo">&nbsp;&nbsp;-&nbsp;{{item.label}}</div>
+        <div hidden?="{{!narrow}}"><img src="images/GDGredblue.png" class="gdglogo"> GDG D.C. <img src="images/GDGgreenyellow.png" class="gdglogo">&nbsp;&nbsp;{{item.label}}</div>
         <paper-fab icon="google-plus" id="paper_fab_narrow" hidden?="{{!narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
 
         <!--<content select=".sourceButton" on-tap="{{viewSourceAction}}">-->
