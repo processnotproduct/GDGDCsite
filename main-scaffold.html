@@ -11,63 +11,61 @@
 <link rel="import" href="./bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="./bower_components/paper-item/paper-item.html">
 
+<!--MAIN ELEMENT-->
 <polymer-element name="main-scaffold" attributes="label responsiveWidth">
 <template>
 
+  <!--MAIN STYLES-->
   <link rel="stylesheet" href="main-scaffold.css">
-
+  <!--MAIN PANEL-->
   <core-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerWidth="250px" responsiveWidth="{{responsiveWidth}}">
 
+    <!--MAIN PANEL-->
     <core-header-panel id="mainHeaderPanel" main mode="{{narrow ? 'waterfall' : 'cover'}}" shadow>
 
+      <!--MAIN PANEL TOOLBAR-->
       <core-toolbar class="{{ {'medium-tall' : !narrow} | tokenList }}">
         <content select=".menuButton" on-tap="{{togglePanel}}">
           <core-icon-button class="menuButton fallback" icon="menu"></core-icon-button>
         </content>
-        <div hidden?="{{!narrow}}"><img src="./images/GDGredblue.png" class="gdglogo"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogo">&nbsp;&nbsp;{{item.label}}</div>
+        <div hidden?="{{!narrow}}" style="font-weight: 300;"><img src="./images/GDGredblue.png" class="gdglogoSmall"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogoSmall">&nbsp;&nbsp;{{item.label}}</div>
         <paper-fab icon="google-plus" id="paper_fab_narrow" hidden?="{{!narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
-
         <!--<content select=".sourceButton" on-tap="{{viewSourceAction}}">-->
         <!--  <core-icon-button class="sourceButton fallback" icon="launch"></core-icon-button>-->
         <!--</content>-->
-
       </core-toolbar>
 
+      <!--MAIN CARD-->
       <div id="card" on-transitionend="{{cardTransitionDone}}" hidden?="{{!item}}">
-
         <paper-item no-ripple icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</paper-item>
-
         <div id="frameContainer">
           <iframe id="frame" on-load="{{frameLoaded}}"></iframe>
         </div>
-
       </div>
 
     </core-header-panel>
 
+    <!--DRAWER PANEL-->
     <core-header-panel drawer>
 
+      <!--MENU TOOLBAR-->
       <core-toolbar class="{{ {'medium-tall' : !narrow} | tokenList }}">
-        <div class="bottom main-label fit"><img src="./images/GDGredblue.png" class="gdglogo"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogo"></div>
+        <div class="bottom main-label fit"><img src="./images/GDGredblue.png" class="gdglogoBig"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogoBig"></div>
         <paper-fab icon="google-plus" id="paper_fab" hidden?="{{narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
       </core-toolbar>
 
-
-
+      <!--WRAPPER FOR MENU-->
       <div class="wrapper">
-        <!--<header class="header">Header</header>-->
-        <!--<article class="main">
-          <p>Pellentesque habitant morbi tristique </p>
-        </article>-->
-        <!--<aside class="aside aside-1">Aside 1</aside>-->
+
+        <!--MAIN MENU-->
         <core-menu id="menu" on-core-select="{{menuSelect}}">
-<!--id="menu"-->
           <core-submenu id="submenu" icon="device:developer-mode" label="DevFest 2014">
             <paper-item label="About" icon="announcement" url="./pages/about.html"></paper-item>
             <paper-item label="Speakers" icon="hardware:keyboard-voice" url="./pages/speakers.html"></paper-item>
             <paper-item label="Topics" icon="extension" url="./pages/sessions.html"></paper-item>
             <paper-item label="Schedule" icon="device:event-note" url="./pages/schedule.html"></paper-item>
             <paper-item label="Sponsors" icon="social:circles-extended" url="./pages/sponsors.html"></paper-item>
+            <paper-item label="Partners" icon="social:people" url="./pages/partners.html"></paper-item>
             <paper-item label="Location" icon="maps:place" url="./pages/location.html"></paper-item>
           </core-submenu>
 
@@ -80,10 +78,9 @@
             <paper-item icon="help" label="About GDG D.C." url="./pages/aboutgdg.html"></paper-item>
             <paper-item icon="assignment-ind" label="Organizers" url="./pages/organizers.html"></paper-item>
           </core-submenu>
-
         </core-menu>
-        <!--<div class="aside aside-2">Aside 2</div>-->
-        <!--<footer class="footer">Footer</footer>-->
+
+        <!--FOOTER FOR MENU-->
         <div class="footer" layout="" horizontal="">
           <p style="margin: 0.9em 0 0 1.8em;">made from </p>
           <core-icon icon="polymer" style="margin: 0.5em 0 0 0.5em; color: skyblue;" onclick="window.open('https://www.polymer-project.org/', '_blank');"></core-icon>
@@ -92,22 +89,16 @@
           <p style="margin: 0.9em 0 0 0.5em;"> by </p>
           <core-icon icon="android" style="color: darkseagreen; margin: 0.5em 0 0 0.5em;" onclick="window.open('https://plus.google.com/+tysonkemp', '_blank');"></core-icon>
         </div>
+
       </div>
-
-
-<!--      <div style="width: 100%;-->
-<!--height: 37px;-->
-<!--background-color: #888;-->
-<!--bottom: 0;-->
-<!--position: absolute;" layout horizontal><p>made from </p><core-icon icon="polymer"></core-icon><p> with </p><core-icon icon="favorite" style="color:red;"></core-icon> </div>-->
-
-
 
     </core-header-panel>
 
   </core-drawer-panel>
 
 </template>
+
+<!--SCRIPT-->
 <script>
 
   Polymer('main-scaffold', {

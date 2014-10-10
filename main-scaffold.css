@@ -28,14 +28,69 @@ core-toolbar::shadow #bottomBar {
 }
 
 .main-label {
-  padding: 0 0 0.8em 3em;
+  font-size: xx-large;
+  padding: 0 0 .4em 1em;
+  font-weight: 300;
 }
 
 /* menu */
-/*core-menu#menu {*/
-/*  padding: 1em;*/
-/*  margin: 0;*/
-/*  color: #444;*/
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  /*font-weight: bold;*/
+  text-align: center;
+
+  height:100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 38px;
+  background-color: #888;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  font-size: small;
+  color: #eee;
+  font-weight: 200;
+  padding: 0;
+}
+
+core-menu#menu {
+  /*background: gold;*/
+  height: 100%;
+  /*margin:0 auto;*/
+  color: #444;
+  width: 100%;
+  font-weight: 400;
+}
+
+/*@media all and (min-width: 600px) {*/
+/*  .aside { flex: 1 auto; }*/
+/*}*/
+
+/*@media all and (min-width: 800px) {*/
+  /*.main    { flex: 3 0px; }*/
+/*  #menu    { order: 1; } */
+  /*.main    { order: 2; }*/
+  /*.aside-2 { order: 2; }*/
+/*  .footer  { order: 2; }*/
 /*}*/
 
 /* menu item */
@@ -45,12 +100,13 @@ polyfill-next-selector { content: 'core-menu#menu core-item'; }
   padding-left: 60px;
   font-size: 15px;
   color: #444;
-  font-weight: normal !important;
+  /*font-weight: normal !important;*/
 }
 
 polyfill-next-selector { content: 'core-menu#menu core-item.core-selected'; }
 ::content core-item.core-selected {
   background-color: #dedede;
+  font-weight: 100;
 }
 
 polyfill-next-selector { content: 'core-submenu > #submenu > paper-item'; }
@@ -58,8 +114,10 @@ core-submenu > paper-item.core-selected {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
   background-color: cornflowerblue;
   color: white;
-  margin: 5px;
+  margin: 5px 0 5px 5px;
   border-radius: 2px;
+  font-weight: 400;
+  padding-left: 1.6em;
 }
 
 polyfill-next-selector { content: 'core-submenu > #submenu > paper-item'; }
@@ -110,7 +168,6 @@ polyfill-next-selector { content: '.sourceButton.fallback';}
   top: 13px;
 }
 
-
 polyfill-next-selector { content: '#drawerPanel[narrow] .sourceButton:not(.fallback)';}
 #drawerPanel[narrow] ::content .sourceButton:not(.fallback) {
   right: 8px;
@@ -128,7 +185,7 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   background-color: cornflowerblue;
   letter-spacing: 0.05em;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   color: white;
 }
 
@@ -183,86 +240,27 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   z-index: 1;
 }
 
-.gdglogo {
-  height: 28px;
+.gdglogoBig {
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.gdglogoSmall {
+  height: 26px;
   vertical-align: middle;
   display: inline-block;
   padding-bottom: 3px;
 }
 
-
-
-.wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-
-  font-weight: bold;
-  text-align: center;
-
-  height:100%;
-  width:100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
+core-submenu#submenu.core-selected {
+  font-weight: 300;
 }
 
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
+core-submenu::shadow core-item#submenuItem.core-selected {
+  background-color: white;
+  border-radius: 2px;
+  padding-left: .3em;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26);
 }
-
-/*.header {*/
-/*  background: tomato;*/
-/*}*/
-
-.footer {
-  width: 100%;
-  height: 38px;
-  background-color: #888;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  font-size: small;
-  color: #eee;
-  font-weight: 200;
-  padding: 0;
-}
-
-/*.main {*/
-/*  text-align: left;*/
-/*  background: deepskyblue;*/
-/*}*/
-
-core-menu#menu {
-  /*background: gold;*/
-  height: 100%;
-  /*margin:0 auto;*/
-  color: #444;
-  width: 100%;
-}
-
-/*.aside-2 {*/
-/*  background: hotpink;*/
-/*}*/
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-  /*.main    { flex: 3 0px; }*/
-  #menu    { order: 1; }
-  /*.main    { order: 2; }*/
-  /*.aside-2 { order: 2; }*/
-  .footer  { order: 2; }
-}
-
-/*body {*/
-/*  padding: 2em; */
-/*}*/
