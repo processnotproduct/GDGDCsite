@@ -44,7 +44,6 @@ core-toolbar::shadow #bottomBar {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 
-  /*font-weight: bold;*/
   text-align: center;
 
   height:100%;
@@ -73,25 +72,11 @@ core-toolbar::shadow #bottomBar {
 }
 
 core-menu#menu {
-  /*background: gold;*/
   height: 100%;
-  /*margin:0 auto;*/
   color: #444;
   width: 100%;
   font-weight: 400;
 }
-
-/*@media all and (min-width: 600px) {*/
-/*  .aside { flex: 1 auto; }*/
-/*}*/
-
-/*@media all and (min-width: 800px) {*/
-  /*.main    { flex: 3 0px; }*/
-/*  #menu    { order: 1; } */
-  /*.main    { order: 2; }*/
-  /*.aside-2 { order: 2; }*/
-/*  .footer  { order: 2; }*/
-/*}*/
 
 /* menu item */
 polyfill-next-selector { content: 'core-menu#menu core-item'; }
