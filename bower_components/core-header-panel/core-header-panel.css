@@ -29,7 +29,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.26);
+  /*box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.26);*/
 }
 
 #dropShadow {
@@ -42,6 +42,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 #dropShadow.hidden {
+  display: none;
+}
+
+#sideShadow {
+  position: absolute;
+  top: 144px;
+  right: -6px;
+  width: 6px;
+  box-shadow: inset 5px 0px 6px -3px rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+#sideShadow.hidden {
   display: none;
 }
 

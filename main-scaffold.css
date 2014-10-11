@@ -61,7 +61,7 @@ core-toolbar::shadow #bottomBar {
 .footer {
   width: 100%;
   height: 38px;
-  background-color: #888;
+  background-color: #666;
   bottom: 0;
   left: 0;
   position: fixed;
@@ -69,6 +69,15 @@ core-toolbar::shadow #bottomBar {
   color: #eee;
   font-weight: 200;
   padding: 0;
+}
+
+#footerShadow {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  right: 0;
+  left: 0;
+  box-shadow: inset 0px -5px 6px -3px rgba(0,0,0,0.4);
 }
 
 core-menu#menu {
@@ -249,3 +258,5 @@ core-submenu::shadow core-item#submenuItem.core-selected {
   padding-left: .3em;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26);
 }
+
+
