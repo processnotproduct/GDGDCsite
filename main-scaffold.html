@@ -20,12 +20,8 @@
   <!--MAIN PANEL-->
   <core-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerWidth="250px" responsiveWidth="{{responsiveWidth}}">
 
-    <div><img id="expIcon" src="./images/app_list_experimental_icon.png"></div>
-
     <!--MAIN PANEL-->
     <core-header-panel id="mainHeaderPanel" main mode="{{narrow ? 'waterfall' : 'cover'}}" shadow>
-
-      <div><img src="./images/app_list_experimental_icon.png"></div>
 
       <!--MAIN PANEL TOOLBAR-->
       <core-toolbar class="{{ {'medium-tall' : !narrow} | tokenList }}">
@@ -95,13 +91,9 @@
           <core-icon icon="android" style="color: darkseagreen; margin: 0.5em 0 0 0.5em;" onclick="window.open('https://plus.google.com/+tysonkemp', '_blank');"></core-icon>
         </div>
 
-
-
       </div>
 
     </core-header-panel>
-
-
 
   </core-drawer-panel>
 
