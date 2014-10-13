@@ -17,6 +17,7 @@
 
   <!--MAIN STYLES-->
   <link rel="stylesheet" href="main-scaffold.css">
+
   <!--MAIN PANEL-->
   <core-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerWidth="250px" responsiveWidth="{{responsiveWidth}}">
 
@@ -28,16 +29,18 @@
         <content select=".menuButton" on-tap="{{togglePanel}}">
           <core-icon-button class="menuButton fallback" icon="menu"></core-icon-button>
         </content>
-        <div hidden?="{{!narrow}}" style="font-weight: 300;"><img src="./images/GDGredblue.png" class="gdglogoSmall"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogoSmall">&nbsp;&nbsp;{{item.label}}</div>
+        <div hidden?="{{!narrow}}" style="font-weight: 300;"><core-item icon="{{item.icon}}">{{item.label}}</core-item></div>
         <paper-fab icon="google-plus" id="paper_fab_narrow" hidden?="{{!narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
         <!--<content select=".sourceButton" on-tap="{{viewSourceAction}}">-->
         <!--  <core-icon-button class="sourceButton fallback" icon="launch"></core-icon-button>-->
         <!--</content>-->
       </core-toolbar>
 
+      <!--<img src="./images/GDGredblue.png" class="gdglogoSmall"> GDG D.C. <img src="./images/GDGgreenyellow.png" class="gdglogoSmall">&nbsp;&nbsp;-->
+
       <!--MAIN CARD-->
       <div id="card" on-transitionend="{{cardTransitionDone}}" hidden?="{{!item}}">
-        <div icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</div>
+        <core-item icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</core-item>
         <div id="frameContainer">
           <iframe id="frame" on-load="{{frameLoaded}}"></iframe>
         </div>

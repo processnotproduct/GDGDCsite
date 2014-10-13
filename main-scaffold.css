@@ -67,7 +67,7 @@ core-toolbar::shadow #bottomBar {
   position: fixed;
   font-size: small;
   color: #eee;
-  font-weight: 200;
+  font-weight: 300;
   padding: 0;
 }
 
@@ -82,9 +82,10 @@ core-toolbar::shadow #bottomBar {
 
 core-menu#menu {
   /*height: 100%;*/
-  color: #444;
+  color: #555;
   width: 100%;
   font-weight: 400;
+  padding: 0;
 }
 
 /* menu item */
@@ -108,7 +109,7 @@ core-submenu > paper-item.core-selected {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
   background-color: cornflowerblue;
   color: white;
-  margin: 5px 0 5px 5px;
+  margin: 5px 5px 5px 5px;
   border-radius: 2px;
   font-weight: 400;
   padding-left: 1.6em;
@@ -123,6 +124,10 @@ core-submenu > paper-item {
 core-submenu::shadow #submenu {
   margin-left: 1em !important;
 }
+
+/*core-drawer-panel#drawer::shadow #mainContainer::-webkit-scrollbar {*/
+/*  display: none;*/
+/*}*/
 
 /* card */
 #card {
@@ -244,13 +249,14 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
 
 .gdglogoSmall {
   height: 26px;
-  vertical-align: middle;
-  display: inline-block;
-  padding-bottom: 3px;
+  /*vertical-align: middle;*/
+  /*display: inline-block;*/
+  /*padding-bottom: 3px;*/
 }
 
 core-submenu#submenu.core-selected {
   font-weight: 300;
+  margin: 0 !important;
 }
 
 core-submenu::shadow core-item#submenuItem.core-selected {
@@ -258,4 +264,9 @@ core-submenu::shadow core-item#submenuItem.core-selected {
   border-radius: 2px;
   padding-left: .3em;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.26);
+  margin-right: 5px;
+}
+
+core-item::shadow core-icon#icon {
+  margin: 0 8px 0 4px !important;
 }
