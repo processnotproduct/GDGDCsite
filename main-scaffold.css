@@ -117,6 +117,7 @@ core-submenu > paper-item.core-selected {
 polyfill-next-selector { content: 'core-submenu > #submenu > paper-item'; }
 core-submenu > paper-item {
   margin: 5px;
+  height: 40px !important;
 }
 
 core-submenu::shadow #submenu {
