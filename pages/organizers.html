@@ -1,76 +1,118 @@
 <!doctype html>
 <html>
-<head>
-  <style>
-    body {
-      margin: 0;
-    }
-    /*Google Logo Boxes*/
-    .logo-card {
-      background: white;
-      width: 200px;
-      height: 200px;
-      position: relative;
-      margin: 0 auto;
-      padding: 1em;
-      border-radius: 2px;
-      background-size: 180px 180px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .card-inner {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 2px;
-    }
-    .logo-box {
-      width: 100%;
-      display: inline-flex;
-      /*margin-bottom: 2em;*/
-    }
+  <head>
 
-    #card-top {
-      display: block;
-      margin: 0 0 2em 0;
-      /*margin: 64px 120px 60px 5px;*/
-      background-color: #fff;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      border-radius: 0 0 2px 2px;
-      overflow: hidden;
-    }
-    #card {
-      display: block;
-      margin: 0 0 2em 0;
-      /*margin: 64px 120px 60px 5px;*/
-      background-color: #fff;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-  </style>
-</head>
+    <style>
+      body {
+        font-family: RobotoDraft, sans-serif;
+        margin: 0 3px 0 3px;
+      }
 
-<body>
+      #core_card {
+        background-image: url('../images/clouds.png');
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        border-radius: 0 0 2px 2px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        padding: 1em;
+        margin: 0 0 1em 0;
+      }
 
-  <div id="card-top">
-    <section class="logo-box">
-        <div class="logo-card" z="2" style="background-image: url('../images/antonio.jpg');">
-          <paper-shadow></paper-shadow>
-        </div>
-        <div class="logo-card" z="2" style="background-image: url('../images/chida.jpg');">
-          <paper-shadow></paper-shadow>
-        </div>
-        <div class="logo-card" z="2" style="background-image: url('../images/tyson.jpg');">
-          <paper-shadow></paper-shadow>
-        </div>
-        <div class="logo-card" z="2" style="background-image: url('../images/babs.jpg');">
-          <paper-shadow></paper-shadow>
-        </div>
-    </section>
-  </div>
+      #header-box {
+        width: 100%;
+        text-align: center;
+        display: flex-wrap;
+      }
 
-</body>
+      #spkHeadshot {
+        float: left;
+        margin: 0 1em 0 0;
+      }
+
+      #spkBio {
+        box-sizing: border-box;
+        margin: 1em;
+      }
+
+      #container {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        border-radius: 2px;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 1em;
+      }
+
+      #subtitle {
+        font-weight: 300;
+        font-size: medium;
+      }
+
+      h1 {
+        font-weight: 500;
+        line-height: .7em;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="core_card" narrow?="{{narrow}}" layout vertical>
+      <div id="header-box">
+        <h1 style="font-weight: 300;">Coming Soon!</h1>
+        <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
+      </div>
+    </div>
+
+    <div id="container" flex>
+      <div id="spkHeadshot"><img id="hS" src="../images/chida.jpg"></div>
+      <div id="spkBio">
+        <header>
+          <h1>Chida<br>
+            <span id="subtitle">Cloud</span>
+          </h1>
+        </header>
+        <p>Cloud stuff</p>
+      </div>
+    </div>
+
+    <div id="container" flex>
+      <div id="spkHeadshot"><img id="hS" src="../images/antonio.jpg"></div>
+      <div id="spkBio">
+        <header>
+          <h1>Antonio<br>
+            <span id="subtitle">Wearables</span>
+          </h1>
+        </header>
+        <p>Cloud stuff</p>
+      </div>
+    </div>
+
+    <div id="container" flex>
+      <div id="spkHeadshot"><img id="hS" src="../images/babs.jpg"></div>
+      <div id="spkBio">
+        <header>
+          <h1>Babs<br>
+            <span id="subtitle">Social</span>
+          </h1>
+        </header>
+        <p>Cloud stuff</p>
+      </div>
+    </div>
+
+    <div id="container" flex>
+      <div id="spkHeadshot"><img id="hS" src="../images/tyson.jpg"></div>
+      <div id="spkBio">
+        <header>
+          <h1>Tyson<br>
+            <span id="subtitle">UI/UX</span>
+          </h1>
+        </header>
+        <p>Cloud stuff</p>
+      </div>
+    </div>
+
+  </body>
 </html>
