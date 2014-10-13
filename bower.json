@@ -1,13 +1,27 @@
 {
   "name": "GDGDCsite",
-  "description": "",
-  "homepage": "",
+  "description": "Site for GDG D.C.",
+  "homepage": "www.gdgdc.com",
   "keywords": [
   ],
-  "author": "",
+  "author": "Tyson Kemp",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
-    "paper-elements": "Polymer/paper-elements#master"
+    "paper-elements": "Polymer/paper-elements#master",
+    "core-drawer-panel": "Polymer/core-drawer-panel#master",
+    "core-header-panel": "Polymer/core-header-panel#master",
+    "core-icon-button": "Polymer/core-icon-button#master",
+    "core-item": "Polymer/core-item#master",
+    "core-menu": "Polymer/core-menu#master",
+    "core-toolbar": "Polymer/core-toolbar#master",
+    "core-icons": "Polymer/core-icons#master",
+    "device-icons": "Polymer/device-icons#master",
+    "hardware-icons": "Polymer/hardware-icons#master",
+    "maps-icons": "Polymer/maps-icons#master",
+    "social-icons": "Polymer/social-icons#master",
+    "core-submenu": "Polymer/core-submenu#master",
+    "paper-fab": "Polymer/paper-fab#master",
+    "paper-item": "Polymer/paper-item#master"
   }
 }
