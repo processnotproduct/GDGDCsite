@@ -5,7 +5,7 @@
     <style>
       body {
         font-family: RobotoDraft, sans-serif;
-        margin: 0 3px 0 3px;
+        margin: 0;
       }
 
       #core_card {
@@ -25,16 +25,6 @@
         display: flex-wrap;
       }
 
-      #spkHeadshot {
-        float: left;
-        margin: 0 1em 0 0;
-      }
-
-      #spkBio {
-        box-sizing: border-box;
-        margin: 1em;
-      }
-
       #container {
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
@@ -42,41 +32,32 @@
         height: 200px;
         overflow: hidden;
         margin-bottom: 1em;
+        text-align: center;
+        padding: 1em;
       }
 
-      #subtitle {
-        font-weight: 300;
-        font-size: medium;
+      #img {
+        height: 100%;
       }
-
-      h1 {
-        font-weight: 500;
-        line-height: .7em;
-      }
-
     </style>
   </head>
 
   <body>
 
-    <div id="core_card" narrow?="{{narrow}}" layout vertical>
+    <div id="core_card">
       <div id="header-box">
         <h1 style="font-weight: 300;">Coming Soon!</h1>
         <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
       </div>
     </div>
 
-    <!--<div id="container" flex>-->
-    <!--  <div id="spkHeadshot"><img id="hS" src="../images/chida.jpg"></div>-->
-    <!--  <div id="spkBio">-->
-    <!--    <header>-->
-    <!--      <h1>Chida<br>-->
-    <!--        <span id="subtitle">Cloud</span>-->
-    <!--      </h1>-->
-    <!--    </header>-->
-    <!--    <p>Cloud stuff</p>-->
-    <!--  </div>-->
-    <!--</div>-->
+    <div id="container">
+      <img id="img" src="../images/google.png">
+    </div>
+
+    <div id="container">
+      <img id="img" src="../images/aol.png">
+    </div>
 
   </body>
 </html>
