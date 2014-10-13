@@ -8,7 +8,7 @@
     body {
       font-family: RobotoDraft, sans-serif;
       margin: 0;
-      /*height: 100%;*/
+      min-height: 100%;
     }
     .header-box {
       width: 100%;
@@ -27,8 +27,9 @@
       background-color: white;
       margin: 0;
       padding: 1em;
-      background-size: cover;
+      background-size: contain;
       background-position: center bottom;
+      background-repeat: no-repeat;
       text-align: center;
     }
   </style>
@@ -38,9 +39,10 @@
 
   <div id="core_card" narrow?="{{narrow}}" layout vertical>
     <div class="header-box">
-      <img src="">
-      <h1 style="font-weight: 300;">Coming Soon!</h1>
-      <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
+      <img src="../images/google.png">
+      <img src="../images/aol.png">
+      <!--<h1 style="font-weight: 300;">Coming Soon!</h1>-->
+      <!--<h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>-->
     </div>
   </div>
 

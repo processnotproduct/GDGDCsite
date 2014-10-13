@@ -206,9 +206,9 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   left: 0;
 }
 
-/*#drawerPanel[narrow] #frame {*/
-  /*min-height: 100%;*/
-/*}*/
+#drawerPanel[narrow] #frame {
+  min-height: 100%;
+}
 
 #drawerPanel[narrow] #frameContainer {
   position: absolute;
