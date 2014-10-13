@@ -37,7 +37,7 @@
 
       <!--MAIN CARD-->
       <div id="card" on-transitionend="{{cardTransitionDone}}" hidden?="{{!item}}">
-        <paper-item no-ripple icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</paper-item>
+        <div icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</div>
         <div id="frameContainer">
           <iframe id="frame" on-load="{{frameLoaded}}"></iframe>
         </div>
