@@ -22,6 +22,8 @@
     "social-icons": "Polymer/social-icons#master",
     "core-submenu": "Polymer/core-submenu#master",
     "paper-fab": "Polymer/paper-fab#master",
-    "paper-item": "Polymer/paper-item#master"
+    "paper-item": "Polymer/paper-item#master",
+    "google-map": "PolymerLabs/google-map#master",
+    "core-scaffold": "Polymer/core-scaffold#master"
   }
 }
