@@ -21,7 +21,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <!--POLYMER PLATFORM-->
-  <script src="./bower_components/platform/platform.js"></script>
+  <!--<script src="./bower_components/platform/platform.js"></script>-->
   <script src="./bower_components/webcomponentsjs/webcomponents.js"></script>
 
   <!--CORE-->
@@ -71,11 +71,13 @@
 
 </head>
 
-<body unresolved  touch-action="auto" class="bg">
+<body unresolved touch-action="auto" class="bg">
 
   <main-scaffold></main-scaffold>
 
-  <div><img id="expIcon" src="./images/app_list_experimental_icon.png" onclick="window.open('http://itshackademic.com/codelabs/', '_blank');"></div>
+  <div>
+    <img id="expIcon" src="./images/app_list_experimental_icon.png" onclick="window.open('http://itshackademic.com/codelabs/', '_blank');">
+  </div>
 
   <script>
     // Hello Developers! See console.

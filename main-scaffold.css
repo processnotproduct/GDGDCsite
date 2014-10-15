@@ -194,7 +194,7 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
 #frame {
   display: block;
   width: 100%;
-  min-height: 500px;
+  min-height: 1000px;
   border: none;
 }
 
@@ -278,4 +278,8 @@ core-submenu::shadow core-item#submenuItem.core-selected {
 
 core-item::shadow core-icon#icon {
   margin: 0 8px 0 4px !important;
+}
+
+paper-fab::shadow core-icon#icon {
+  vertical-align: inherit;
 }
