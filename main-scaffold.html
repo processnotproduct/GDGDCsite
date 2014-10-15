@@ -198,7 +198,7 @@
         return;
       }
       this.$.frame.contentWindow.addEventListener('polymer-ready', function() {
-        setTimeout(this.updateFrameHeight.bind(this), 100);
+        setTimeout(this.updateFrameHeight.bind(this), 150);
         this.$.frame.contentWindow.addEventListener('core-resize',
           this.boundResizeFrame, false);
       }.bind(this));
