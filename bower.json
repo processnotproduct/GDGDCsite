@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
+    "webcomponentsjs": "Polymer/webcomponentsjs#master",
     "paper-elements": "Polymer/paper-elements#master",
     "core-drawer-panel": "Polymer/core-drawer-panel#master",
     "core-header-panel": "Polymer/core-header-panel#master",
