@@ -295,7 +295,7 @@ core-header-panel::shadow div#mainContainer::-webkit-scrollbar-track {
   /*border-left: 1px solid #ccc;*/
 }
 core-header-panel::shadow div#mainContainer::-webkit-scrollbar-thumb {
-  background-color: #666;
+  background-color: rgba(0,0,0,0.2);
   border-radius: 2px;
 }
 core-header-panel::shadow div#mainContainer::-webkit-scrollbar-thumb:hover {
