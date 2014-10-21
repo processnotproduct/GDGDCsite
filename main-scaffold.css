@@ -179,9 +179,10 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
 }
 
 .element-label {
-  height: 80px;
-  line-height: 80px;
+  height: 77px;
+  line-height: 77px;
   padding-left: 24px;
+  margin: 3px 3px 0em 3px;
   background-color: cornflowerblue;
   letter-spacing: 0.05em;
   font-size: 24px;
@@ -199,7 +200,7 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
 }
 
 #frameContainer {
-  margin: 0 3px 0 3px;
+  margin: 0 6px 0 6px;
 }
 
 /* narrow layout */
