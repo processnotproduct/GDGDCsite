@@ -45,9 +45,9 @@
         /*text-align: center;*/
         /*padding-top: 1em;*/
         /*margin: 0 3px 1em 3px;*/
-        background-image: url('../images/bg/clouds.png');
-        background-size: cover;
-        background-position: center bottom;
+        background-image: url('../images/bg/clouds180.png');
+        background-size: contain;
+        background-position: center top;
         background-repeat: no-repeat;
       }
 
@@ -116,6 +116,20 @@
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
       }
+
+      #title {
+        margin-bottom: 0;
+        margin-right: .3em;
+      }
+
+      #subtitle {
+        margin-bottom: 50px;
+        margin-right: .3em;
+      }
+
+      #card {
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+      }
     </style>
   </head>
 
@@ -136,10 +150,11 @@
 <section id="tickets" class="tickets">
 	<div class="content-wrapper" id="container">
 	<div id="header-box">
-		<div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1">
-			<h3>GDG D.C. DevFest '14 Tickets</h3>
+		<div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1" style="text-align: right;">
+			<h3 id="title">GDG D.C. DevFest '14 Tickets</h3>
+			<h6 id="subtitle">Nov 21st 9:00 AM @AOL - Dulles, VA</h6>
 
-          <div class="col-md-4 col-sm-4 pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500" style="border:1px #42bd41 solid;border-right: none;">
+          <div id="card" class="col-md-4 col-sm-4 pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500" style="border:1px #42bd41 solid;">
             <div class="pricing-ribbon" style="background: #42bd41;">-50%</div>
 
   					<div class="pricing-header">
@@ -162,7 +177,7 @@
   					</div>
   				</div>
 
-          <div class="col-md-4 col-sm-4 pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500" style="top:-12px;border:1px #e51c23 solid;border-right: none;">
+          <div id="card" class="col-md-4 col-sm-4 pricing-col animated fadeInLeft visible" data-animation="fadeInLeft" data-delay="500" style="top:-12px;border:1px #e51c23 solid;">
             <div class="pricing-ribbon" style="background: #e51c23;">-50%</div>
 
   					<div class="pricing-header">
@@ -185,7 +200,7 @@
   					</div>
   				</div>
 
-          <div class="col-md-4 col-sm-4 pricing-col pricing-col-featured animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
+          <div id="card" class="col-md-4 col-sm-4 pricing-col pricing-col-featured animated fadeInDown visible" data-animation="fadeInDown" data-delay="0" style="z-index: 2;">
 
             <!--<div class="pricing-ribbon">-20%</div>-->
   					<div class="pricing-header">
@@ -209,9 +224,7 @@
   					</div>
   				</div>
 
-
-
-  	      <div class="col-md-4 col-sm-4 pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="500" style="top:-12px;border:1px #ffeb3b solid;border-left: none;">
+  	      <div id="card" class="col-md-4 col-sm-4 pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="500" style="top:-12px;border:1px #ffeb3b solid;z-index: 1;">
             <div class="pricing-ribbon" style="background:#ffeb3b;color:black;">-20%</div>
 
   					<div class="pricing-header">
@@ -235,7 +248,7 @@
   					</div>
   				</div>
 
-  				<div class="col-md-4 col-sm-4 pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="500" style="border-left: none;">
+  				<div id="card" class="col-md-4 col-sm-4 pricing-col animated fadeInRight visible" data-animation="fadeInRight" data-delay="500" style="border-right: 1px #333 solid;">
             <div class="pricing-ribbon">-33.3%</div>
 
   					<div class="pricing-header">
