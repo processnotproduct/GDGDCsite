@@ -2,75 +2,163 @@
   <head>
     <!--FONTS-->
     <link rel="import" href="../bower_components/font-roboto/roboto.html">
-
+    <link rel="stylesheet" href="main.min.css">
     <style>
+      html {
+        background: rgba(0,0,0,0);
+      }
       body {
         font-family: RobotoDraft, sans-serif;
         margin: 0;
-        min-height:500px;
+        /*min-height:500px;*/
         width: 100%;
-        overflow: hidden;
+        -webkit-font-smoothing: antialiased !important;
+        background-color: rgba(0,0,0,0);
       }
-      #container {
+      #containerTop {
+        height: 500px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        margin: 0 5px 1em 5px;
+        border-radius: 0 0 2px 2px;
+        padding: 0;
+        background-color: white;
+      }
+      #containerAbout {
         background-color: white;
         height: 500px;
-        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        margin: 0 5px 1em 5px;
+        border-radius: 2px;
+      }
+      #containerStats {
+        background-color: white;
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        margin: 0 5px 1em 5px;
+        border-radius: 2px;
       }
       #main {
         background-image: url('../images/bg/Overlooking-DC-Flip.jpg');
         background-position: left bottom;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-color:black;
         height: 500px;
         width: 100%;
-        background-size: cover;
-        opacity: 0.5;
+        opacity: 0.4;
       }
       #title {
-        text-align: right;
-        color: black;
-        right: 0.5em;
-        top: -0.5em;
-        font-weight: 100;
-        font-size: -webkit-xxx-large;
+        top: 1em;
+        right: 1em;
         position: absolute;
-      }
-      #subtitle {
         text-align: right;
-        color: black;
-        right: 0.5em;
-        top: 0.5em;
-        font-weight: 100;
         font-size: -webkit-xxx-large;
-        position: absolute;
-      }
-      #subsubtitle {
-        text-align: right;
-        color: black;
-        right: 0.5em;
-        top: 1.5em;
         font-weight: 100;
-        font-size: -webkit-xxx-large;
-        position: absolute;
+        line-height: normal;
       }
       #about {
-        text-align: left;
-        color: black;
+        bottom: 1em;
         left: 1em;
-        top: 10em;
-        font-weight: 300;
-        font-size: xx-large;
         position: absolute;
-        width:70%;
+        text-align: left;
+        font-size: xx-large;
+        font-weight: 300;
+        line-height: normal;
+        width: 70%;
       }
     </style>
   </head>
   <body>
-    <section id="container">
+    <section id="containerTop">
       <div id="main"></div>
-      <p id="title">GDG D.C. DevFest '14</p>
-			<p id="subtitle">Nov 21st 9:00 AM</p>
-			<p id="subsubtitle">@AOL - Dulles, VA</p>
+      <p id="title">GDG D.C. DevFest '14<br>Nov 21st 9:00 AM<br>@AOL - Dulles, VA</p>
 			<p id="about">Sessions and Code Labs on Android, Google Glass, Wearables, Polymer, AngularJS, Google Cloud Platform and others.</p>
+    </section>
+
+    <section id="containerAbout">
+      <div class="content-wrapper">
+          <div class="col-lg-10 col-lg-offset-1">
+              <h3>About GDG DevFest</h3>
+              <div class="row about-details">
+
+                  <div class="col-md-4 col-xs-6">
+                      <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
+                          <h5>Conference</h5>
+                          <img class="img-circle" src="../images/test/polymer-lopezi.png" height="128" width="128" alt="Conference">
+                          <p>The biggest Google related event in the country carefully crafted for you by GDG community! Awesome speakers and lot's of fun!</p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 col-xs-6">
+                      <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="500">
+                          <h5>Workshops</h5>
+                          <img class="img-circle" src="../images/test/workshop.jpg" height="128" width="128" alt="Workshops">
+                          <p>Full-day of workshops, hands-on experience, hacking and debugging. Come and tame your favourite technology!</p>
+                      </div>
+                  </div>
+
+                   <div class="clearfix visible-xs"></div>
+
+                  <div class="col-md-4 col-xs-6">
+                      <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="1000">
+                          <h5>Hackathon</h5>
+                          <img class="img-circle" src="../images/test/hackathon.jpg" height="128" width="128" alt="Hackathon">
+                          <p>Full-day free-style hackaton! Want some real teambuilding on friday? Grab your team and join our hackathon!</p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="containerStats" class="statistic image-section parallax" style="background-image: url(../images/bg/Washington_DC_Metro.jpg);background-position: top center !important;background-repeat: no-repeat;background-size: cover !important;background-attachment: inherit;">
+    	<div class="overlay solid-overlay"></div>
+    	<div class="content-wrapper">
+    		<div class="col-lg-10 col-lg-offset-1">
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="counter animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
+                        <div class="stat"><span class="timer" data-from="0" data-to="250">250</span>+</div>
+    					<div class="stat-info">attendees</div>
+    					<hr>
+    					<p class="small">from around the DMV</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="counter animated fadeInDown visible" data-animation="fadeInDown" data-delay="500">
+                        <div class="stat"><span class="timer" data-from="0" data-to="10">10</span>+</div>
+    					<div class="stat-info">hours</div>
+    					<hr>
+    					<p class="small">of pure Google technologies</p>
+                    </div>
+                </div>
+
+                 <div class="clearfix visible-xs"></div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="counter animated fadeInDown visible" data-animation="fadeInDown" data-delay="1000">
+                        <div class="stat"><span class="timer" data-from="0" data-to="12">12</span>+</div>
+    					<div class="stat-info">speakers</div>
+    					<hr>
+    					<p class="small">from Google and beyond</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="counter animated fadeInDown visible" data-animation="fadeInDown" data-delay="1500">
+                        <div class="stat"><span class="timer" data-from="0" data-to="3">3</span></div>
+    					<div class="stat-info">parallel tracks</div>
+    					<hr>
+    					<p class="small">plus entertainment lounge</p>
+                    </div>
+                </div>
+
+                 <div class="clearfix visible-xs"></div>
+
+    		</div>
+    	</div>
     </section>
   </body>
 </html>

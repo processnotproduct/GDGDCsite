@@ -60,24 +60,24 @@
 
         <!--MAIN MENU-->
         <core-menu id="menu" selected="0" on-core-select="{{menuSelect}}">
-          <core-submenu id="submenu" icon="device:developer-mode" label="DevFest 2014">
-            <paper-item label="About" icon="announcement" url="./pages/about2.html"></paper-item>
-            <paper-item label="Speakers" icon="hardware:keyboard-voice" url="./pages/speakers.html"></paper-item>
-            <paper-item label="Topics" icon="extension" url="./pages/sessions.html"></paper-item>
-            <paper-item label="Schedule" icon="notification:event-note" url="./pages/schedule.html"></paper-item>
-            <paper-item label="Sponsors" icon="social:circles-extended" url="./pages/sponsors.html"></paper-item>
-            <paper-item label="Partners" icon="social:people" url="./pages/partners.html"></paper-item>
-            <paper-item label="Location" icon="maps:place" url="./pages/location.html"></paper-item>
+          <core-submenu label="Up Coming Events" id="submenu" icon="device:developer-mode">
+            <paper-item label="DevFest DC '14" icon="announcement" url="./pages/about2.html"></paper-item>
+            <!--<paper-item label="Speakers" icon="hardware:keyboard-voice" url="./pages/speakers.html"></paper-item>-->
+            <!--<paper-item label="Topics" icon="extension" url="./pages/sessions.html"></paper-item>-->
+            <!--<paper-item label="Schedule" icon="notification:event-note" url="./pages/schedule.html"></paper-item>-->
+            <!--<paper-item label="Sponsors" icon="social:circles-extended" url="./pages/sponsors.html"></paper-item>-->
+            <!--<paper-item label="Partners" icon="social:people" url="./pages/partners.html"></paper-item>-->
+            <!--<paper-item label="Location" icon="maps:place" url="./pages/location.html"></paper-item>-->
           </core-submenu>
 
-          <core-submenu id="submenu" icon="archive" label="Archived Events">
+          <core-submenu label="Archived Events" id="submenu" icon="archive">
             <paper-item label="DevFest 2013" icon="check-box" url="./pages/devfest13.html"></paper-item>
-            <paper-item label="DevFest 2012" icon="check-box" url="http://gdg-x.github.io/zeppelin/"></paper-item>
+            <paper-item label="DevFest 2012" icon="check-box" url="./pages/devfest12.html"></paper-item>
           </core-submenu>
 <!--url="./pages/devfest12.html"-->
-          <core-submenu id="submenu" icon="settings-ethernet" label="GDG D.C." style="padding-bottom: 3em;">
-            <paper-item icon="help" label="About GDG D.C." url="./pages/aboutgdg.html"></paper-item>
-            <paper-item icon="assignment-ind" label="Organizers" url="./pages/organizers.html"></paper-item>
+          <core-submenu label="GDG D.C." id="submenu" icon="settings-ethernet" style="padding-bottom: 3em;">
+            <paper-item label="About GDG D.C." icon="help" url="./pages/aboutgdg.html"></paper-item>
+            <paper-item label="Organizers" icon="assignment-ind" url="./pages/organizers.html"></paper-item>
           </core-submenu>
         </core-menu>
 
