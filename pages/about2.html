@@ -2,7 +2,13 @@
   <head>
     <!--FONTS-->
     <link rel="import" href="../bower_components/font-roboto/roboto.html">
+
     <link rel="stylesheet" href="main.min.css">
+
+    <!--<script type="text/javascript" charset="utf-8" href="../js/scripts.js"></script>-->
+    <!--<script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/12/%7Bcommon,util,geocoder,map,geometry,poly,marker%7D.js"></script>-->
+    <!--<script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/12/%7Bonion%7D.js"></script>-->
+    <!--<script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/cat_js/maps-api-v3/api/js/18/12/%7Bcontrols,stats%7D.js"></script>-->
     <style>
       html {
         background: rgba(0,0,0,0);
@@ -23,20 +29,20 @@
         padding: 0;
         background-color: white;
       }
-      #containerAbout {
+      #containerOthers {
         background-color: white;
         /*height: 500px;*/
         box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
         margin: 0 5px 1em 5px;
         border-radius: 2px;
       }
-      #containerStats {
-        background-color: white;
+      /*#containerStats {*/
+      /*  background-color: white;*/
         /*height: 300px;*/
-        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
-        margin: 0 5px 1em 5px;
-        border-radius: 2px;
-      }
+      /*  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;*/
+      /*  margin: 0 5px 1em 5px;*/
+      /*  border-radius: 2px;*/
+      /*}*/
       #main {
         background-image: url('../images/bg/Overlooking-DC-Flip.jpg');
         background-position: left bottom;
@@ -48,8 +54,8 @@
         opacity: 0.4;
       }
       #title {
-        top: 1em;
-        right: 1em;
+        top: 0.5em;
+        right: 0.5em;
         position: absolute;
         text-align: right;
         font-size: -webkit-xxx-large;
@@ -66,16 +72,31 @@
         line-height: normal;
         width: 70%;
       }
+      #map {
+        background-image: url(../images/map.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
     </style>
   </head>
   <body>
+
+    <!--<div id="preloader" class="preloader">-->
+    <!--    <div class="loader-gplus"></div>-->
+    <!--</div>-->
+
     <section id="containerTop">
       <div id="main"></div>
       <p id="title">GDG D.C. DevFest '14<br>Nov 21st 9:00 AM<br>@AOL - Dulles, VA</p>
 			<p id="about">Sessions and Code Labs on Android, Google Glass, Wearables, Polymer, AngularJS, Google Cloud Platform and others.</p>
     </section>
 
-    <section id="containerAbout">
+    <section id="containerOthers">
       <div class="content-wrapper">
           <div class="col-lg-10 col-lg-offset-1">
               <h3>About GDG DevFest</h3>
@@ -84,7 +105,7 @@
                   <div class="col-md-4 col-xs-6">
                       <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="0">
                           <h5>Conference</h5>
-                          <img class="img-circle" src="../images/test/polymer-lopezi.png" height="128" width="128" alt="Conference">
+                          <img class="img-circle" src="../images/test/polymer-lopezi.png" height="128" width="128" alt="Conference" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
                           <p>The biggest Google related event in the country carefully crafted for you by GDG community! Awesome speakers and lot's of fun!</p>
                       </div>
                   </div>
@@ -92,7 +113,7 @@
                   <div class="col-md-4 col-xs-6">
                       <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="500">
                           <h5>Workshops</h5>
-                          <img class="img-circle" src="../images/test/workshop.jpg" height="128" width="128" alt="Workshops">
+                          <img class="img-circle" src="../images/test/workshop.jpg" height="128" width="128" alt="Workshops" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
                           <p>Full-day of workshops, hands-on experience, hacking and debugging. Come and tame your favourite technology!</p>
                       </div>
                   </div>
@@ -102,7 +123,7 @@
                   <div class="col-md-4 col-xs-6">
                       <div class="animated fadeInDown visible" data-animation="fadeInDown" data-delay="1000">
                           <h5>Hackathon</h5>
-                          <img class="img-circle" src="../images/test/hackathon.jpg" height="128" width="128" alt="Hackathon">
+                          <img class="img-circle" src="../images/test/hackathon.jpg" height="128" width="128" alt="Hackathon" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
                           <p>Full-day free-style hackaton! Want some real teambuilding on friday? Grab your team and join our hackathon!</p>
                       </div>
                   </div>
@@ -112,7 +133,7 @@
       </div>
     </section>
 
-    <section id="containerStats" class="statistic image-section parallax" style="background-image: url(../images/bg/Washington_DC_Metro.jpg);background-position: top center !important;background-repeat: no-repeat;background-size: cover !important;background-attachment: inherit;">
+    <section id="containerOthers" class="statistic image-section parallax" style="background-image: url(../images/bg/Washington_DC_Metro.jpg);background-position: top center !important;background-repeat: no-repeat;background-size: cover !important;background-attachment: inherit;">
     	<div class="overlay solid-overlay"></div>
     	<div class="content-wrapper">
     		<div class="col-lg-10 col-lg-offset-1">
@@ -159,6 +180,99 @@
 
     		</div>
     	</div>
+    </section>
+
+    <section id="containerOthers">
+    	<div class="content-wrapper">
+    		<div class="col-lg-10 col-lg-offset-1">
+    			<h3>Latest news</h3>
+    			<article class="row">
+
+    					<div class="post col-md-6 col-sm-6 text-left animated fadeInDown visible" data-animation="fadeInDown" data-delay="500">
+    						<h6>Call for Papers</h6>
+    						<p class="post-body">GDG DevFest Washington D.C. 2014 will be held 21st of November at AOL in Sterling, VA. If you want to be part of this great event as a speaker you knocked at the good door. Presenters – who should speak at the DevFest Conference? </p>
+    					</div>
+
+    					<div class="post col-md-6 col-sm-6 text-left animated fadeInDown visible" data-animation="fadeInDown" data-delay="500">
+    						<h6>Hello World!</h6>
+    						<p class="post-body">We’re very excited - not just because of the inordinate amount of caffeine based products consumed - but also because our team are putting together the final missing parts to the biggest Google related event in Washington D.C. - GDG DevFest 2014!</p>
+    					</div>
+
+    			</article>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="containerOthers" class="rockstar-speakers image-section parallax" style="background-image: url(../images/bg/rockstar-speakers.jpg);background-position: top center !important;background-repeat: no-repeat;background-size: cover !important;background-attachment: inherit;">
+    	<div class="overlay solid-overlay"></div>
+    	<div class="content-wrapper">
+    		<div class="col-lg-10 col-lg-offset-1 rockstar-speakers-list">
+
+    			<h3 id="rockstar-speaker-title">Rockstar speakers</h3>
+
+    			<div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="0">
+    			  <div class="rockstar-speaker">
+    			    <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/spkrs/blank_profile.jpg);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+    			    <div class="name">Lorem</div>
+    			    <div class="sub">Ipsum</div>
+    			  </div>
+    			</div>
+    			<div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="500">
+    			  <div class="rockstar-speaker">
+    			    <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/spkrs/blank_profile.jpg);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+    			    <div class="name">Lorem</div>
+    		      <div class="sub">Ipsum</div>
+    			  </div>
+    		  </div>
+    			<div class="clearfix visible-xs"></div>
+    		  <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="1000">
+    		    <div class="rockstar-speaker">
+    		      <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/spkrs/blank_profile.jpg);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+    		      <div class="name">Lorem</div>
+    		      <div class="sub">Ipsum</div>
+    		    </div>
+    		  </div>
+    		  <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="1500">
+    		    <div class="rockstar-speaker">
+    		      <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/spkrs/blank_profile.jpg);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+    		      <div class="name">Lorem</div>
+    		      <div class="sub">Ipsum</div>
+    		    </div>
+    		  </div>
+
+    			<div class="clearfix"></div>
+
+    			<span class="bordered">
+    				<a href="/zeppelin/speakers/" class="bottom-section-link waves-effect waves-button waves-light">See all speakers</a>
+    			</span>
+
+    		</div>
+    	</div>
+    </section>
+
+    <section id="containerOthers" class="location-map">
+      <div id="map"></div>
+      <!--<div id="canvas-map" class="canvas-map"></div>-->
+        <div class="content-wrapper">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-md-offset-1 animated location-description text-left fadeInLeft visible" data-animation="fadeInLeft" data-delay="0" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
+                <div class="row">
+                    <div class="pull-left">
+                        <h3>Location</h3>
+                        <ul>
+                            <li>AOL</li>
+                            <li>22000 Aol Way Dulles, VA 20166</li>
+                            <li><a href="mailto:gdgwdc@gmail.com">gdgwdc@gmail.com</a></li>
+                            <li><time>10:00</time> - <time>20:00</time></li>
+                        </ul>
+                    </div>
+                    <a onclick="window.open('https://www.google.com/maps/dir//AOL,+Inc,+22000+Aol+Way,+Dulles,+VA+20166/@39.0041405,-77.4494015,16z/data=!4m12!1m3!3m2!1s0x0000000000000000:0xdc42d9468f9a72d5!2sAOL,+Inc!4m7!1m0!1m5!1m1!1s0x89b638e764f4fc67:0xdc42d9468f9a72d5!2m2!1d-77.447616!2d39.004266', '_blank');" class="pull-right">
+                        <svg class="icon icon-direction" viewBox="0 0 32 32">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../images/sprites.svg#icon-direction"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
   </body>
