@@ -3,6 +3,8 @@
 <head>
   <title>GDG D.C.</title>
 
+  <script></script>
+
   <!--SCRIPT FOR BACKGROUND-->
   <script type="text/javascript">
     function changeImg(imgNumber)   {
@@ -39,6 +41,8 @@
 
   <link rel="import" href="./main-scaffold.html">
 
+  <link rel="stylesheet" href="./pages/main.min.css">
+
   <style>
     html {
       height:100%;
@@ -70,18 +74,27 @@
       bottom: 0px;
       right: 0px;
     }
-
+    .same-height {
+      margin-bottom: 15px;
+    }
   </style>
 
 </head>
 
 <body unresolved touch-action="auto" class="bg">
 
+  <div id="preloader" class="preloader">
+    <div class="loader-gplus"></div>
+  </div>
+
   <main-scaffold></main-scaffold>
 
   <div>
     <img id="expIcon" src="./images/polymentTRANS.png" onclick="window.open('http://itshackademic.com/codelabs/', '_blank');">
   </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="./js/scripts.js"></script>
 
   <script>
     // Hello Developers! See console.
