@@ -280,8 +280,14 @@
     </section>
 
     <section id="containerOthers" class="location-map">
-      <div class="overlayMap" onClick="style.pointerEvents='none'"></div>
-      <div id="map">
+      <div class="overlayMap" onClick="style.pointerEvents='none'" style="
+    touch-action: none;
+    pointer-events: none;
+"></div>
+      <div id="map" style="
+    touch-action: none;
+    pointer-events: none;
+">
         <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBWhGFqiFI3WxnoAB23Ch07GGjjo5C29fM&center=39.004270,-77.449938&zoom=17" frameborder="0" height="100%" width="100%" style="border:0;"></iframe>
       </div>
         <div class="content-wrapper">
