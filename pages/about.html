@@ -28,7 +28,7 @@
       #containerOthers {
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
-        margin: 0 5px 1em 5px;
+        margin: 0 5px 15px 5px;
         border-radius: 2px;
       }
       #main {
@@ -69,13 +69,8 @@
         top: 0;
         left: 0;
       }
-      .overlayMap {
-        background:transparent;
-        position:absolute;
-        width:100%;
-        height:100%;
-        top:0;
-        margin-top:0;
+      #directionButton {
+        margin-left: 15px;
       }
       @media (max-width: 768px) {
         #containerTop {
@@ -280,16 +275,14 @@
     </section>
 
     <section id="containerOthers" class="location-map">
-      <div class="overlayMap" style="touch-action: none;pointer-events: none;"></div>
-      <div id="map" style="touch-action: none;pointer-events: none;">
-        <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBWhGFqiFI3WxnoAB23Ch07GGjjo5C29fM&center=39.004270,-77.449938&zoom=17" frameborder="0" height="100%" width="100%" style="touch-action: none;pointer-events: none;border:0;"></iframe>
+      <div id="map" style="background-image:url(https://maps.googleapis.com/maps/api/staticmap?center=39.004270,-77.449938&zoom=16&size=640x640&scale=2&maptype=roadmap&markers=color:red|39.004273,-77.447616);background-position: center !important;background-repeat: no-repeat;background-size: cover !important;">
       </div>
         <div class="content-wrapper">
           <div class="col-lg-3 col-md-4 col-sm-6 col-md-offset-1 animated location-description text-left fadeInLeft visible" data-animation="fadeInLeft" data-delay="0" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
             <div class="row">
               <div class="pull-left">
                 <h3>Location
-                  <a onclick="window.open('https://www.google.com/maps/dir//AOL,+Inc,+22000+Aol+Way,+Dulles,+VA+20166/@39.0041405,-77.4494015,16z/data=!4m12!1m3!3m2!1s0x0000000000000000:0xdc42d9468f9a72d5!2sAOL,+Inc!4m7!1m0!1m5!1m1!1s0x89b638e764f4fc67:0xdc42d9468f9a72d5!2m2!1d-77.447616!2d39.004266', '_blank');" class="pull-right" style="float: center !important;">
+                  <a id="directionButton" onclick="window.open('https://www.google.com/maps/dir//AOL,+Inc,+22000+Aol+Way,+Dulles,+VA+20166/@39.0041405,-77.4494015,16z/data=!4m12!1m3!3m2!1s0x0000000000000000:0xdc42d9468f9a72d5!2sAOL,+Inc!4m7!1m0!1m5!1m1!1s0x89b638e764f4fc67:0xdc42d9468f9a72d5!2m2!1d-77.447616!2d39.004266', '_blank');" class="pull-right" style="float: center !important;">
                     <svg class="icon icon-direction" viewBox="0 0 32 32" style="margin:0;border: 1px lightgray solid;border-radius: 2px;background-color: whitesmoke;">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../images/sprites.svg#icon-direction"></use>
                     </svg>
