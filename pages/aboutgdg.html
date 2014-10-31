@@ -10,7 +10,7 @@
 
       #core_card {
         background-image: url('../images/bg/clouds180.png');
-        /*background-size: contain;*/
+        background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         border-radius: 0 0 2px 2px;
@@ -63,12 +63,28 @@
         font-weight: 500;
         line-height: .7em;
       }
-
+      #containerOthers {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        margin: 0 5px 15px 5px;
+        border-radius: 2px;
+      }
+      #footer {
+        background-image: url(../images/bg/clouds.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+      }
     </style>
   </head>
 
   <body>
-
+    <!--<section id="containerOthers">-->
     <div id="core_card" narrow?="{{narrow}}" layout vertical>
       <div id="header-box">
         <h1 style="font-weight: 300;">Coming Soon!</h1>
@@ -111,6 +127,11 @@
         <p>Lorum Ipsem</p>
       </div>
     </div>
+    <!--</section>-->
+
+    <!--<section id="containerOthers" style="min-height:150px;">-->
+    <!--  <core-item id="footer"></core-item>-->
+    <!--</section>-->
 
   </body>
 </html>
