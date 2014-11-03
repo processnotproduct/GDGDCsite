@@ -179,8 +179,9 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
 #frame {
   display: block;
   width: 100%;
-  min-height: 600px;
+  /*min-height: 600px;*/
   border: none;
+  height:100%;
 }
 
 #frameContainer {
@@ -303,5 +304,21 @@ core-header-panel::shadow div#mainContainer::-webkit-scrollbar-thumb:hover {
 }
 
 #frameContainer::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
+
+#frame::-webkit-scrollbar {
+  width: 0px;
+}
+
+#frame::-webkit-scrollbar-track {
+  display: none;
+}
+
+#frame::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+#frame::-webkit-scrollbar-thumb:hover {
   display: none;
 }
