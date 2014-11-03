@@ -117,6 +117,17 @@
         width: 100%;
         left: 0;
       }
+      #footerText {
+        bottom: 0;
+        right: 0.5em;
+        position: absolute;
+        text-align: right;
+        font-size: large;
+        font-weight: 100;
+        line-height: normal;
+        text-shadow: 0px 0px 7px white;
+        color: black;
+      }
       @media (max-width: 768px) {
         #containerTop {
           height: 300px;
@@ -329,34 +340,40 @@
 
           <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="0">
             <div class="rockstar-speaker">
-              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/gcp-logo.png);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/gcp-logo.png);"></div>
               <div class="name">Google</div>
               <div class="sub">Cloud Platform</div>
             </div>
           </div>
           <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="500">
             <div class="rockstar-speaker">
-              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/android-logo.png);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/android-logo.png);"></div>
               <div class="name">Android</div>
               <div class="sub">Wear and Mobile</div>
             </div>
           </div>
-          <div class="clearfix visible-xs"></div>
+          <!--<div class="clearfix visible-xs"></div>-->
           <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="1000">
             <div class="rockstar-speaker">
-              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/chrome-logo.png);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/polymer-logo.png);"></div>
               <div class="name">Polymer</div>
               <div class="sub">The Future of Web</div>
             </div>
           </div>
           <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="1500">
             <div class="rockstar-speaker">
-              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/google-glass.png);box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;"></div>
+              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/google-glass.png);"></div>
               <div class="name">Glass</div>
               <div class="sub">Explore</div>
             </div>
           </div>
-
+          <div class="col-md-3 col-xs-6 rockstar-speakers-item animated fadeInUp visible" data-animation="fadeInUp" data-delay="1000">
+            <div class="rockstar-speaker">
+              <div class="flow-img img-circle rockstar-speaker-img" style="background-image: url(../images/logos/chrome-logo.png);"></div>
+              <div class="name">Chrome</div>
+              <div class="sub">One Browser Everwhere</div>
+            </div>
+          </div>
           <div class="clearfix"></div>
 
           <!--<span class="bordered">-->
@@ -368,7 +385,7 @@
     </section>
 
     <section id="containerOthers" class="location-map">
-      <div id="map" style="background-image:url(https://maps.googleapis.com/maps/api/staticmap?center=39.004270,-77.449938&zoom=16&size=640x640&scale=2&maptype=roadmap&markers=color:red|39.004273,-77.447616);background-position: center !important;background-repeat: no-repeat;background-size: cover !important;">
+      <div id="map" style="background-image: url(../images/staticmap.png);background-position: center !important;background-repeat: no-repeat;background-size: cover !important;">
       </div>
         <div class="content-wrapper">
           <div class="col-lg-3 col-md-4 col-sm-6 col-md-offset-1 animated location-description text-left fadeInLeft visible" data-animation="fadeInLeft" data-delay="0" style="box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;">
@@ -443,7 +460,9 @@
     </section>
 
     <section id="containerOthers" style="min-height:150px;">
-      <core-item id="footer"></core-item>
+      <core-item id="footer">
+        <p id="footerText">&#169; GDG D.C. 2014</p>
+      </core-item>
     </section>
 
   </body>
