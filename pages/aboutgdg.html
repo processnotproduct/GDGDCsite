@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
   <head>
+    <!--FONTS-->
+    <link rel="import" href="../bower_components/font-roboto/roboto.html">
 
     <style>
       body {
@@ -49,7 +51,7 @@
       }
 
       #subtitle {
-        font-weight: 300;
+        font-weight: 400;
         font-size: medium;
         margin-left: .5em;
       }
@@ -59,9 +61,31 @@
         border-radius: 75px;
       }
 
-      h1 {
-        font-weight: 500;
-        line-height: .7em;
+      #name {
+        font-size: xx-large;
+        font-weight: 100;
+        margin: 0;
+        line-height: 0.8em;
+      }
+
+      #orgDisc {
+        font-weight: 300;
+      }
+
+      #title {
+        font-weight: 100;
+        text-align: right;
+        font-size: x-large;
+        margin-top: 0;
+      }
+      #about {
+        font-weight: 300;
+        text-align: left;
+      }
+      #dis {
+        font-weight: 100;
+        font-size: x-small;
+        text-align: left;
       }
       #containerOthers {
         background-color: white;
@@ -84,11 +108,22 @@
   </head>
 
   <body>
-    <!--<section id="containerOthers">-->
     <div id="core_card" narrow?="{{narrow}}" layout vertical>
       <div id="header-box">
-        <h1 style="font-weight: 300;">Coming Soon!</h1>
-        <h3 style="font-weight: 300;">Stay tuned for more details and news!</h3>
+        <p id="title">Hosting Google and Open Source Development Events in the greater Washington D.C.</p>
+        <p id="about">Google Developer Group Washington D.C. (GDG-DC) is a developer group that is passionate about discussing, discovering, and distributing Google technologies. GDG-DC welcomes it's members from Washington D.C., Northern Virginia, and Maryland.
+                                      <br><br>
+                                      Everything from the Android, App Engine, and Google Chrome platforms, to product APIs like the Maps API, YouTube API and Google Calendar API.
+                                      <br><br>
+                                      Started as National Capital Area Google Tech User Group in April 2010, we have grown up to 1000+ members on Meetup and have conducted 25+ events so far.
+                                      <br><br>
+                                      Links:<br>
+                                      Meetup - GDG-DC<br>
+                                      DevFest - GDG-DC<br>
+                                      Twitter @gdevdc - GDG-DC<br>
+                                      developers.google.com - GDG-DC</p>
+        <br>
+        <p id="dis">Disclaimer: GDG DC is an independent group; our activities and the opinions expressed on this +Page should in no way be linked to Google, the corporation.</p>
       </div>
     </div>
 
@@ -96,11 +131,11 @@
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/chida.jpg"></div>
       <div id="spkBio">
         <header>
-          <h1>Chida<br>
+          <p id="name">Chida<br>
             <span id="subtitle">Cloud</span>
-          </h1>
+          </p>
         </header>
-        <p>Lorum Ipsem</p>
+        <p id="orgDisc">Lorum Ipsem</p>
       </div>
     </div>
 
@@ -108,11 +143,11 @@
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/antonio.jpg"></div>
       <div id="spkBio">
         <header>
-          <h1>Antonio<br>
+          <p id="name">Antonio<br>
             <span id="subtitle">Wearables</span>
-          </h1>
+          </p>
         </header>
-        <p>Lorum Ipsem</p>
+        <p id="orgDisc">Lorum Ipsem</p>
       </div>
     </div>
 
@@ -120,18 +155,13 @@
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/tyson.jpg"></div>
       <div id="spkBio">
         <header>
-          <h1>Tyson<br>
+          <p id="name">Tyson<br>
             <span id="subtitle">UI/UX</span>
-          </h1>
+          </p>
         </header>
-        <p>Lorum Ipsem</p>
+        <p id="orgDisc">Lorum Ipsem</p>
       </div>
     </div>
-    <!--</section>-->
-
-    <!--<section id="containerOthers" style="min-height:150px;">-->
-    <!--  <core-item id="footer"></core-item>-->
-    <!--</section>-->
 
   </body>
 </html>
