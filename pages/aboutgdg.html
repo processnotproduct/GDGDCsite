@@ -7,6 +7,7 @@
     <style>
       body {
         font-family: RobotoDraft, sans-serif;
+        -webkit-font-smoothing: antialiased !important;
         margin: 0;
       }
 
@@ -18,7 +19,7 @@
         border-radius: 0 0 2px 2px;
         box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
         padding: 1em;
-        margin: 0 5px 1em 5px;
+        margin: 0 5px 15px 5px;
       }
 
       #header-box {
@@ -47,7 +48,7 @@
         border-radius: 75px 2px 2px 75px;
         height: 150px;
         overflow: hidden;
-        margin: 0 5px 1em 5px;
+        margin: 0 5px 15px 5px;
       }
 
       #subtitle {
@@ -78,55 +79,93 @@
         font-size: x-large;
         margin-top: 0;
       }
+
       #about {
         font-weight: 300;
         text-align: left;
       }
+
       #dis {
         font-weight: 100;
         font-size: x-small;
         text-align: left;
       }
+
       #containerOthers {
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
         margin: 0 5px 15px 5px;
         border-radius: 2px;
       }
-      #footer {
+
+      #containerBottom {
         background-image: url(../images/bg/clouds.png);
         background-size: cover;
         background-position: center bottom;
         background-repeat: no-repeat;
-        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        margin: 0 5px 5px 5px;
+        border-radius: 2px;
+      }
+
+      /*#footer {*/
+      /*  background-image: url(../images/bg/clouds.png);*/
+      /*  background-size: cover;*/
+      /*  background-position: center bottom;*/
+      /*  background-repeat: no-repeat;*/
+      /*  height: 100%;*/
+        /*position: absolute;*/
+      /*  top: 0;*/
+      /*  width: 100%;*/
+      /*  left: 0;*/
+      /*}*/
+
+      #footerText {
+        bottom: 0px;
+        right: 1.5em;
         position: absolute;
-        top: 0;
-        width: 100%;
-        left: 0;
+        text-align: right;
+        font-size: large;
+        font-weight: 100;
+        text-shadow: 0px 0px 7px white;
+        color: #444;
+      }
+
+      @media (max-width: 768px) {
+        #core_card {
+        background-image: url('../images/bg/clouds180.png');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px, rgba(0, 0, 0, 0.26) 0px 0px 3px;
+        padding: 1em;
+        margin: 5px 5px 15px 5px;
+      }
       }
     </style>
   </head>
 
   <body>
-    <div id="core_card" narrow?="{{narrow}}" layout vertical>
+    <section id="core_card" narrow?="{{narrow}}" layout vertical>
       <div id="header-box">
         <p id="title">Hosting Google and Open Source Development Events in the greater Washington DC</p>
         <p id="about">Google Developer Group Washington DC (GDG-DC) is a developer group that is passionate about discussing, discovering, and distributing Google technologies. GDG-DC welcomes it's members from Washington DC, Northern Virginia, and Maryland.
-                                      <br><br>
-                                      Everything from the Android, App Engine, and Google Chrome platforms, to product APIs like the Maps API, YouTube API and Google Calendar API.
-                                      <br><br>
-                                      Started as National Capital Area Google Tech User Group in April 2010, we have grown up to 1000+ members on Meetup and have conducted 25+ events so far.
-                                      <br><br>
-                                      Links:<br>
-                                      <a href="http://www.meetup.com/gdg-dc/">Meetup</a><br>
-                                      <a href="https://twitter.com/gdevdc">Twitter @gdevdc</a><br>
-                                      <a href="https://developers.google.com/groups/chapter/116047476115208123051/">developers.google.com</a></p>
+                      <br><br>
+                      Everything from the Android, App Engine, and Google Chrome platforms, to product APIs like the Maps API, YouTube API and Google Calendar API.
+                      <br><br>
+                      Started as National Capital Area Google Tech User Group in April 2010, we have grown up to 1000+ members on Meetup and have conducted 25+ events so far.
+                      <br><br>
+                      Links:<br>
+                      <a href="http://www.meetup.com/gdg-dc/">Meetup</a><br>
+                      <a href="https://twitter.com/gdevdc">Twitter @gdevdc</a><br>
+                      <a href="https://developers.google.com/groups/chapter/116047476115208123051/">developers.google.com</a></p>
         <br>
         <p id="dis">Disclaimer: GDG DC is an independent group; our activities and the opinions expressed on this site should in no way be linked to Google, the corporation.</p>
       </div>
-    </div>
+    </section>
 
-    <div id="container" flex>
+    <section id="container">
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/chida.jpg"></div>
       <div id="spkBio">
         <header>
@@ -134,11 +173,11 @@
             <span id="subtitle">Cloud</span>
           </p>
         </header>
-        <p id="orgDisc">Lorum Ipsem</p>
+        <p id="orgDisc"></p>
       </div>
-    </div>
+    </section>
 
-    <div id="container" flex>
+    <section id="container">
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/antonio.jpg"></div>
       <div id="spkBio">
         <header>
@@ -146,11 +185,11 @@
             <span id="subtitle">Wearables</span>
           </p>
         </header>
-        <p id="orgDisc">Lorum Ipsem</p>
+        <p id="orgDisc"></p>
       </div>
-    </div>
+    </section>
 
-    <div id="container" flex>
+    <section id="container">
       <div id="spkHeadshot"><img id="hS" src="../images/orgs/tyson.jpg"></div>
       <div id="spkBio">
         <header>
@@ -158,9 +197,15 @@
             <span id="subtitle">UI/UX</span>
           </p>
         </header>
-        <p id="orgDisc">Lorum Ipsem</p>
+        <p id="orgDisc"></p>
       </div>
-    </div>
+    </section>
+
+    <section id="containerBottom" style="min-height:100px;">
+      <core-item>
+        <p id="footerText">&#169; GDG DC 2014</p>
+      </core-item>
+    </section>
 
   </body>
 </html>

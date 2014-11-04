@@ -1,4 +1,3 @@
-<!--CORE-->
 <link rel="import" href="./bower_components/core-toolbar/core-toolbar.html">
 <link rel="import" href="./bower_components/core-drawer-panel/core-drawer-panel.html">
 <link rel="import" href="./bower_components/core-header-panel/core-header-panel.html">
@@ -7,100 +6,53 @@
 <link rel="import" href="./bower_components/core-menu/core-submenu.html">
 <link rel="import" href="./bower_components/core-icon-button/core-icon-button.html">
 
-<!--PAPER-->
-<link rel="import" href="./bower_components/paper-fab/paper-fab.html">
-<link rel="import" href="./bower_components/paper-item/paper-item.html">
-
-<!--MAIN ELEMENT-->
 <polymer-element name="main-scaffold" attributes="label responsiveWidth">
 <template>
 
-  <!--MAIN STYLES-->
-  <link rel="stylesheet" href="main-scaffold.css">
+  <link rel="stylesheet" href="./main-scaffold.css">
 
-  <!--MAIN DRAWER PANEL-->
   <core-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerWidth="250px" responsiveWidth="{{responsiveWidth}}">
 
-    <!--MAIN PANEL-->
     <core-header-panel id="mainHeaderPanel" main mode="{{narrow ? 'waterfall' : 'cover'}}" shadow>
 
-      <!--MAIN PANEL TOOLBAR-->
       <core-toolbar class="{{ {'medium-tall' : !narrow} | tokenList }}">
         <content select=".menuButton" on-tap="{{togglePanel}}">
           <core-icon-button class="menuButton fallback" icon="menu"></core-icon-button>
         </content>
-        <div hidden?="{{!narrow}}" style="font-weight: 300;"><core-item icon="{{item.icon}}">{{item.label}}</core-item></div>
-        <paper-fab icon="add" id="paper_fab_narrow" hidden?="{{!narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
+        <div hidden?="{{!narrow}}">{{item.label}}</div>
         <!--<content select=".sourceButton" on-tap="{{viewSourceAction}}">-->
         <!--  <core-icon-button class="sourceButton fallback" icon="launch"></core-icon-button>-->
         <!--</content>-->
+
       </core-toolbar>
 
-      <!--MAIN CARD-->
       <div id="card" on-transitionend="{{cardTransitionDone}}" hidden?="{{!item}}">
-        <core-item icon="{{item.icon}}" class="element-label" hidden?="{{narrow}}">{{item.label}}</core-item>
+
+        <div class="element-label" hidden?="{{narrow}}">{{item.label}}</div>
+
         <div id="frameContainer">
           <iframe id="frame" on-load="{{frameLoaded}}"></iframe>
         </div>
+
       </div>
 
     </core-header-panel>
 
-    <!--DRAWER PANEL-->
     <core-header-panel drawer>
 
-      <!--MENU TOOLBAR-->
       <core-toolbar class="{{ {'medium-tall' : !narrow} | tokenList }}">
-        <div class="bottom main-label fit"><img src="./images/gdg/GDGredblue.png" class="gdglogoBig"> GDG DC <img src="./images/gdg/GDGgreenyellow.png" class="gdglogoBig"></div>
-        <paper-fab icon="add" id="paper_fab" hidden?="{{narrow}}" onclick="window.open('https://plus.google.com/116047476115208123051/about', '_blank');"></paper-fab>
+        <div class="bottom main-label fit"><img src="./images/gdg/GDGredblue.png" class="gdglogoBig"> {{label}} <img src="./images/gdg/GDGgreenyellow.png" class="gdglogoBig"></div>
       </core-toolbar>
 
-      <!--WRAPPER FOR MENU-->
-      <div class="wrapper">
-
-        <!--MAIN MENU-->
-        <core-menu id="menu"  on-core-select="{{menuSelect}}">
-          <core-submenu label="DevFest DC '14" id="submenu" icon="device:developer-mode">
-            <paper-item label="About" icon="announcement" url="./pages/about.html"></paper-item>
-            <!--<paper-item label="Speakers" icon="hardware:keyboard-voice" url="./pages/speakers.html"></paper-item>-->
-            <!--<paper-item label="Topics" icon="extension" url="./pages/sessions.html"></paper-item>-->
-            <!--<paper-item label="Schedule" icon="notification:event-note" url="./pages/schedule.html"></paper-item>-->
-            <!--<paper-item label="Sponsors" icon="social:circles-extended" url="./pages/sponsors.html"></paper-item>-->
-            <!--<paper-item label="Partners" icon="social:people" url="./pages/partners.html"></paper-item>-->
-            <!--<paper-item label="Location" icon="maps:place" url="./pages/location.html"></paper-item>-->
-          </core-submenu>
-
-          <!--<core-submenu label="Archived Events" id="submenu" icon="archive">-->
-          <!--  <paper-item label="DevFest 2013" icon="check-box" url="./pages/devfest13.html"></paper-item>-->
-          <!--  <paper-item label="DevFest 2012" icon="check-box" url="./pages/devfest12.html"></paper-item>-->
-          <!--</core-submenu>-->
-<!--url="./pages/devfest12.html"-->
-          <core-submenu label="GDG DC" id="submenu" icon="settings-ethernet" style="padding-bottom: 3em;">
-            <paper-item label="About GDG DC" icon="help" url="./pages/aboutgdg.html"></paper-item>
-            <!--<paper-item label="Organizers" icon="assignment-ind" url="./pages/organizers.html"></paper-item>-->
-          </core-submenu>
-        </core-menu>
-
-        <!--FOOTER FOR MENU-->
-        <div class="footer" layout="" horizontal="">
-          <div id="footerShadow"></div>
-          <p style="margin: 0.9em 0 0 1.8em;">made from </p>
-          <core-icon icon="polymer" style="margin: 0.5em 0 0 0.5em; color: skyblue;" onclick="window.open('https://www.polymer-project.org/', '_blank');"></core-icon>
-          <p style="margin: 0.9em 0 0 0.5em;"> with </p>
-          <core-icon icon="favorite" style="margin: 0.5em 0 0 0.5em; color: lightpink;"onclick="window.open('https://www.youtube.com/watch?v=l2q_-xN2N54', '_blank');"></core-icon>
-          <p style="margin: 0.9em 0 0 0.5em;"> by </p>
-          <core-icon icon="android" style="color: darkseagreen; margin: 0.5em 0 0 0.5em;" onclick="window.open('https://plus.google.com/+tysonkemp', '_blank');"></core-icon>
-        </div>
-
-      </div>
+      <core-menu id="menu" on-core-select="{{menuSelect}}">
+        <content></content>
+      </core-menu>
 
     </core-header-panel>
 
   </core-drawer-panel>
 
 </template>
-
-<!--SCRIPT-->
 <script>
 
   Polymer('main-scaffold', {
