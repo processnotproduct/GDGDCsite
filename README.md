@@ -1,4 +1,4 @@
 GDGDCsite
 =========
 
-<comingSoon>
+vulcanize -o index.html --strip prebuildindex.html
