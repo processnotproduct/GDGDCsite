@@ -1,5 +1,10 @@
 {
-  "name": "sampler-scaffold",
+  "name": "GDGDCsite",
+  "description": "Site for GDG D.C.",
+  "homepage": "www.gdgdc.com",
+  "keywords": [
+  ],
+  "author": "Tyson Kemp",
   "private": true,
   "dependencies": {
     "core-drawer-panel": "Polymer/core-drawer-panel#master",
