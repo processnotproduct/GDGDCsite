@@ -50,6 +50,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <input id="input4" is="core-input" value="something">
   </paper-input-decorator>
 
+  <br>
+
+  <paper-input-decorator id="decorator5" label="input" labelVisible="false">
+    <input>
+  </paper-input-decorator>
+
+  <br>
+
   <script>
 
     var fake = new Fake();
@@ -61,6 +69,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var i3 = document.getElementById('input3');
     var d4 = document.getElementById('decorator4');
     var i4 = document.getElementById('input4');
+    var d5 = document.getElementById('decorator5');
 
     function reset(d, i) {
       d.labelVisible = null;
@@ -85,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('label is invisible if floating label and focused', function(done) {
         assert.ok(d3._labelVisible);
         d3.focusAction();
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.ok(!d3._labelVisible);
           done();
         });
@@ -104,6 +113,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         assert.ok(!d1._labelVisible);
       });
 
+      test('labelVisible works in an attribute', function() {
+        assert.ok(!d5._labelVisible);
+      });
+
       test('can create inputs lazily', function() {
         var input = document.createElement('input');
         input.value = 'foobar';
@@ -113,11 +126,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       test('tapping on floating label focuses input', function(done) {
         i3.value = 'foobar';
-        asyncPlatformFlush(function() {
+        flush(function() {
           assert.ok(!d3._labelVisible);
           fake.downOnNode(d1.shadowRoot.querySelector('.floated-label'));
-          asyncPlatformFlush(function() {
-            assert.strictEqual(document.activeElement, i1);
+          flush(function() {
+            assert.strictEqual(window.ShadowDOMPolyfill ? wrap(document.activeElement) : document.activeElement, i1);
             done();
           })
         });

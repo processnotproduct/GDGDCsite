@@ -24,6 +24,9 @@ var
   uglify = require('gulp-uglify')
 ;
 
+// init tests with gulp
+require('web-component-tester').gulp.init(gulp);
+
 var isRelease = process.env.RELEASE !== undefined;
 
 var banner = fs.readFileSync('banner.txt', 'utf8');
@@ -115,6 +118,10 @@ function readManifest(filename, modules) {
   return modules;
 }
 
+gulp.task('copy-bower', function() {
+  return gulp.src(['bower.json', 'package.json', 'README.md']).pipe(gulp.dest('dist/'));
+});
+
 defineBuildTask('webcomponents', './src/WebComponents/build.json');
 defineBuildTask('webcomponents-lite', './src/WebComponents/build-lite.json');
 defineBuildTask('CustomElements');
@@ -122,7 +129,7 @@ defineBuildTask('HTMLImports');
 defineBuildTask('ShadowDOM');
 
 gulp.task('build', ['webcomponents', 'webcomponents-lite', 'CustomElements', 
-  'HTMLImports', 'ShadowDOM']);
+  'HTMLImports', 'ShadowDOM', 'copy-bower']);
 
 gulp.task('release', function(cb) {
   isRelease = true;
