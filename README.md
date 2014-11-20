@@ -12,3 +12,6 @@ vulcanize -o ./pages/devfest14.html --strip ./pages/prebuild-devfest14.html
 
 Builds aboutgdg.html
 vulcanize -o ./pages/aboutgdg.html --strip ./pages/prebuild-aboutgdg.html
+
+Builds codehack.html
+vulcanize -o ./pages/codehack.html --strip ./pages/prebuild-codehack.html
