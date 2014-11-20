@@ -148,9 +148,9 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   position: absolute;
   right: -1.5em;
   z-index: 1;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
+  /*width: 44px;*/
+  /*height: 44px;*/
+  /*padding: 10px;*/
 }
 
 #paper_fab_narrow {
@@ -158,7 +158,26 @@ polyfill-next-selector { content: '#drawerPanel:not([narrow]) .menuButton';}
   position: absolute;
   right: 1em;
   z-index: 1;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
+  /*width: 44px;*/
+  /*height: 44px;*/
+  /*padding: 10px;*/
 }
+/*#paper_fab {*/
+/*  top: 6em;*/
+/*  position: absolute;*/
+/*  right: -1.5em;*/
+/*  z-index: 1;*/
+/*  width: 44px;*/
+/*  height: 44px;*/
+/*  padding: 10px;*/
+/*}*/
+
+/*#paper_fab_narrow {*/
+/*  top: 2em;*/
+/*  position: absolute;*/
+/*  right: 1em;*/
+/*  z-index: 1;*/
+/*  width: 44px;*/
+/*  height: 44px;*/
+/*  padding: 10px;*/
+/*}*/
