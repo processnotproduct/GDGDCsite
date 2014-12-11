@@ -44,19 +44,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   display: none;
 }
 
-#sideShadow {
-  position: absolute;
-  top: 144px;
-  right: -6px;
-  width: 6px;
-  box-shadow: inset 5px 0px 6px -3px rgba(0, 0, 0, 0.4);
-  height: 100%;
-}
-
-#sideShadow.hidden {
-  display: none;
-}
-
 /* 
 mode: scroll 
 */
